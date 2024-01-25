@@ -1,0 +1,41 @@
+.hr{
+    background:skyblue;
+    height:4px;
+    position: relative;
+    border: none;
+}
+.heading{
+    font-weight: 700;
+    color:skyblue;
+}
+.Table{
+    background-color:gainsboro;
+}
+.Table{
+    background-color:gainsboro;
+   
+
+}
+.tab{
+    margin: 20px;
+    height: 100px
+}
+th ,td{
+    padding: 6px;
+}
+
+body{
+    padding-left: 30%;
+    padding-right: 10%;
+}
+.a{
+    padding-left: 5%;
+    text-align: justify;
+}
+
+.hr1{
+    background:skyblue;
+    height:3px;
+    position: relative;
+    border: none;
+}

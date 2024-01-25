@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pages</title> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">   
+   <link rel="stylesheet" media="all and (max-width:480px)" href="chapter.css">
+    <link rel="stylesheet" href="chapter.css">
+</head>
+<body>
+    <hr class="hr">
+    <h2 class="heading">Chapter 7. Verifying the Installation</h2>
+    <p>section leads you through a series of commands to test the NetView program that you just started.<br>
+    Run the commands in exactly the order presented. If you make errors, or issue the commands out of<br>
+    sequence, the contents of the network logs and the results of the operator tests are different from the<br>
+    examples you see in this chapter.</p>
+<p>To verify the NetView installation, issue instructions that test the installation. If you cannot start the tests,<br>
+     ensure that you correctly performed all the installation procedures in the NetView program directory and<br>
+      all the installation procedures in this book.</p> 
+  <b>Usage notes:</b> 
+<p>1.	Your data can differ from the panels in the examples because the display format depends on the type <br>
+    &nbsp; &nbsp; &nbsp;of terminal that you are using.</p> 
+<p>2.	If you customized your system to suppress messages, remember to check the system and Canzlog<br>
+    &nbsp; &nbsp; &nbsp; logs for critical information that might be suppressed during the verification of your NetView <br>
+    &nbsp; &nbsp; &nbsp; installation.</p>
+<p>3.	For a list of tasks and automated tasks that are initialized by default, see Table 14 on page 95 and <br>
+    &nbsp; &nbsp; &nbsp; Table 15 on page 97.</p> 
+    <h4 class="heading">Testing the Command Facility</h4>
+    <hr class="hr1">
+    <p>To start the test of the NetView program, enter the following command:</p>    
+    <p style="background-color: gainsboro;">LOGON APPLID(CNM01)</p>
+<p >A panel similar to Figure 9 on page 73 is displayed.</p>  
+ <img src="img71.jpg" alt=""> 
+ <p><i>Figure 9. IBM Z NetView Logon Panel</i></p>    
+ <p>If the value of the SECOPTS.OPERSEC statement in the CNMSTYLE member is SAFDEF, or if the OPERSEC<br>
+    operand was specified as SAFDEF on the REFRESH command, no PROFILE field is shown on the Logon<br>
+    panel and the HARDCOPY LOG field does not have a default value.
+    </p> 
+ <p>In the PROFILE field, system symbolic substitution is performed on records read from the DSIOPF<br>
+    member in the DSIPARM data set and the specified profile member in the DSIPRF data set. The<br>
+    &DOMAIN symbolic variable that is supplied with the NetView product is also included in the substitution.</p><br>
+ <p>process. The substitution is performed after comment removal but before record processing. After<br>
+    substitution, comments are also removed. Substitution is always performed on the &DOMAIN symbolic<br>
+    variable, unless substitution was disabled when NetView was started.
+    </p> 
+ <b>Logging on</b> 
+ <p>To log on, enter the following text in both the OPERATOR ID field and in the PASSWORD field:</p>   
+ <p style="background-color: gainsboro;">NETOP1</p>    
+ <p>A panel similar to Figure 10 on page 74 is displayed.</p>    
+
+<img src="img72.jpg" alt=""><br>
+<p><i>Figure 10. NetView Initial Message Display</i></p>
+<p>The information that is displayed on this panel is contained in member CNMNEWS in the<br>
+    NETVIEW.V6R3M0.SDSIOPEN data set. The date and time at the top of your panel will differ from the<br>
+    examples.</p>
+<p><b>Usage Note:</b> When verifying your installation, be sure to clear the console between each step. In Figure
+    10 on page 74, the 3 asterisks at the bottom of a panel indicate a held screen.
+    </p>    
+<p><b>Clearing the screen</b></p> 
+<p>To clear the screen and go to the NetView main menu, press the Enter key and continue to press the Enter<br>
+    key until the main menu is displayed (Figure 11 on page 75).</p>
+    <div class="Table">
+ <p>&nbsp;CNM1NETV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IBM Z NetView V6R3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Main Menu</p>
+ <center>Operator ID = NETOP1 Application = CNM0100E</center>  
+ <p class="a">Enter a command (shown highlighted or in white) and press Enter. </p>
+<ul><tr><td>IP Management Menu</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>NETVIP command</td></tr></ul>
+<ul><tr><td>Browse Facility</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>NETVIP command</td></tr></ul>
+<ul><tr><td>Command Facility</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>NETVIP command</td></tr></ul>
+<ul><tr><td>News</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>NETVIP command</td></tr></ul>
+<ul><tr><td>PF Key Settings </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>NETVIP command</td></tr></ul>
+<ul><tr><td>Help Facility </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>NETVIP command</td></tr><br></ul>
+<ul><tr><td>Index of help topics </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>NETVIP command</td></tr></ul>
+<ul><tr><td>Hardware Monitor </td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>NETVIP command</td></tr></ul>
+<ul><tr><td>Session Monitor</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>NETVIP command</td></tr></ul>
+<ul><tr><td>Automated Operations Network</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<td>AON command</td></tr></ul>
+<ul>To log off or disconnect </ul><ul> command or DISC command</ul></table>
+<p>TO SEE YOUR KEY SETTINGS, ENTER 'DISPFK'<br>
+    Action===></p>
+</div>
+<p><i>Figure 11. NetView Main Menu Panel</i></p>
+<p><b>Displaying help information</b></p>
+<p>To go to the NetView help facility, enter the following command:</p>
+<p class="a" style="background-color: gainsboro;">HELP NETVIEW</p>   
+<p class="a">A panel similar to Figure 12 on page 75 is displayed.</p>
+
+ <div class="Table">  
+<p style="padding-top: 3%;">&nbsp;&nbsp;&nbsp;CNMKNEEW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NETVIEW HELP FACILITY MAIN MENU</p>
+
+ <table  class="tab" cellpadding="5" cellspacing="5" >
+<th>Select </th><th>To get information about</th>
+<tr><td>1</td><td>Operator's overview of the NetView Program</td></tr>
+<tr><td>2</td><td> Using the NetView Help Desk for operators</td></tr>
+<tr><td>3</td><td> Using NetView online message help</td></tr>
+<tr><td>4 </td><td>Using command and command list help</td></tr>
+<tr><td>5 </td><td>Finding help on VTAM in NetView</td></tr>
+<tr><td>6</td><td> Finding help on RODM (Resource Object Data Manager)</td></tr>
+<tr><td>7 </td><td>Finding help on GMFHS (Graphic Monitor Facility host subsystem)</td></tr>
+<tr><td>8 </td><td>Help for the NETVIEW stage (NetView Pipelines)</td></tr>
+<tr><td>A </td><td>All NetView commands</td></tr>
+<tr><td>I</td><td> Finding help in the Index</td></tr>
+<tr><td>P</td><td> Help for PIPE syntax</td></tr><br></table>
+
+    <p>Type a value (1 to 8, A, I, or P) and press ENTER.</p>
+    <p>TO SEE YOUR KEY SETTINGS, ENTER 'DISPFK'<br>
+        Action===></p>
+  </div> 
+  <p class="a"><i></i>Figure 12. NetView Help Facility Main Menu</i></p>
+  <p class="a">Press the F2 or F3 key twice to return to the command facility.</p>
+  <p class="a">For help information on the command facility, enter the following command:</p>
+  <p class="a" style="background-color: gainsboro;">HELP</class=>
+  <p class="a">A panel similar to Figure 13 on page 76 is displayed.</p>
+  <div class="Table">  
+    <p style="padding-top: 3%;">&nbsp;&nbsp;&nbsp;CNMKNEEW&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NETVIEW HELP FACILITY MAIN MENU</p>
+    
+     
+        <table  class="tab" cellpadding="5" cellspacing="5" >
+            <th>Select </th><th>To get information about</th>
+            <tr><td>1</td><td> Operator's overview of the command facility</td></tr>
+            <tr><td>2</td><td> Using the terminal access facility (TAF)
+            </td></tr>
+            <tr><td>3</td><td>The command facility screen
+            </td></tr>
+            <tr><td>4 </td><td>Command facility commands and command lists
+            </td></tr>
+            <tr><td>5 </td><td>Field level help
+            </td></tr></table>
+            <p>Type a number (1 through 5) and press ENTER.</p>
+            <center>HELP NETVIEW ---> NetView Help Menu</center>
+            <p>TO SEE YOUR KEY SETTINGS, ENTER 'DISPFK'<br>
+                Action===></p></div>
+<p><i>Figure 13. Command Facility Help Menu Panel</i></p>   
+<p>Select option 4 to display the command facility commands. A panel similar to Figure 14 on page 76 is<br>
+    displayed.</p> 
+    <div class="Table">
+        <p style="padding-top: 3%;">&nbsp;&nbsp;&nbsp;CNMPNL1.EUYCLIST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HELP NCCF COMMANDS &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LINE 0 OF 284</p>
+    <p>*------------------------------- Top of Data------------------------------------------------------------------* </p>
+        <table  class="tab" cellpadding="" cellspacing="" >
+            
+    <tr><td>ACQ</td><td>Acquire a resource........................................................................A2</td></tr>
+    <tr><td>ACT</td><td>Activate VTAM resources ...........................................................A3</td></tr>   
+    <tr><td>ADDCMD</td><td>Add or replace user-written commands...........................A6</td></tr>
+    <tr><td>AFTER</td><td>Schedule a command to run later .......................................A7</td></tr>
+    <tr><td>AGTBRW</td><td>Browse the network log from the NetView EMA . A11</td></tr>
+    <tr><td>AGTSESMG</td><td> Display SNA sessions from the NetView EMA...............A12    </td></tr>     
+    <tr><td>AGTTCPC</td><td>Display TCP/IP data from the NetView EMA.................A13    </td></tr>
+    <tr><td>AINQ</td><td>Display translation tables....................................................A14
+    </td></tr>
+    <tr><td>ALLOCATE</td><td>Allocate an MVS data set.........................................................A19
+    </td></tr>
+    <tr><td>APPLS</td><td>Display minor nodes .....................................................................A41</td></tr>
+    <tr><td>APPLSPEN</td><td>Display sessions state..............................................................A42
+    </td></tr>
+    <tr><td>APSERV</td><td>Accept commands/messages from secure programs A44</td></tr>
+    <tr><td>ASSIGN</td><td>Define operators and groups .................................................A45</td></tr>
+    <tr><td>AT</td><td>Schedule a command to run ......................................................A48</td></tr></table>
+    <p>TO SEE YOUR KEY SETTINGS, ENTER 'DISPFK'<br>
+        CMD==></p>
+        </div>
+<p><i>Figure 14. Using NetView Command and Command List Help Panel</i></p>  
+<p>Press the F3 key twice to return to the command facility.</p> 
+<p>Enter the CLEAR command to refresh the command facility screen.</p> 
+<p><b>Verifying that your automation table is active</b></p>
+<p>To display the name of the active NetView automation table, enter:</p>
+<p style="background-color: gainsboro;">AUTOTBL STATUS</p> 
+<p>If the default NetView automation table (DSITBL01) was loaded during NetView initialization, a panel<br>
+    similar to Figure 15 on page 76 is displayed. </p>
+    <div class="Table">
+        &nbsp;&nbsp; NetView&nbsp;&nbsp;V6R3 &nbsp;-&nbsp; NM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NetView &nbsp;&nbsp;&nbsp;CNM01&nbsp;&nbsp; NETOP1&nbsp;&nbsp;&nbsp;&nbsp; 06/22/19 &nbsp;&nbsp;15:54:10<br>
+        &nbsp;&nbsp;* CNM01 AUTOTBL STATUS<br>
+        &nbsp;&nbsp;' CNM01<br>
+        &nbsp;&nbsp;BNH361I THE AUTOMATION TABLE CONSISTS OF THE FOLLOWING LIST OF MEMBERS:<br>
+        &nbsp;&nbsp;CNM01PPT COMPLETED INSERT FOR TABLE #1: DSITBL01 AT 06/22/19 15:51:29 (FIRST)<br>
+        &nbsp;&nbsp;CNM01PPT COMPLETED INSERT FOR TABLE #2: DSIAMIAT AT 06/22/19 15:51:29<br>
+        &nbsp;&nbsp;----------------------------------------------------------------------------------------------------------------<br>
+        &nbsp;&nbsp;???
+    </div>
+<p><i>Figure 15. Displaying the active automation table</i></p>
+<p>Enter the CLEAR command to refresh the command facility screen.</p>
+<p><b>Displaying session information</b></p>
+<p>To display the status of all operator terminals, NetView-NetView task (NNT) sessions requested by other<br>
+    NetView systems, and information about your session, enter the following command:</p>
+    <p style="background-color: gainsboro;">WHO</p>  
+    <p>A panel similar to Figure 16 on page 77 is displayed. </p> 
+    <div class="Table" style="padding-left: 5%;">
+        &nbsp;&nbsp; NetView&nbsp;&nbsp;V6R3 &nbsp;&nbsp; NM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NetView &nbsp;&nbsp;&nbsp;CNM01&nbsp;&nbsp; NETOP1&nbsp;&nbsp;&nbsp;&nbsp; 06/22/19 &nbsp;&nbsp;15:54:10<br>
+        * CNM01&nbsp;&nbsp;&nbsp;&nbsp; WHO<br>
+        C CNM01&nbsp;&nbsp;&nbsp;&nbsp; LIST STATUS=OPS<br>
+        - CNM01&nbsp;&nbsp;&nbsp;&nbsp; OPERATOR:&nbsp;&nbsp; NETOP1 TERM: &nbsp;&nbsp;NT68L703 STATUS:&nbsp;&nbsp; ACTIVE<br>
+        - CNM01 &nbsp;&nbsp;&nbsp;&nbsp;OPERATOR:&nbsp;&nbsp; AUTOAON TERM: &nbsp;&nbsp;AUTOAON STATUS:&nbsp;&nbsp; ACTIVE<br>
+        - CNM01&nbsp;&nbsp;&nbsp;&nbsp; OPERATOR: &nbsp;&nbsp;AUTOCT7 TERM:&nbsp;&nbsp; AUTOCT7 STATUS:&nbsp;&nbsp; ACTIVE<br>
+        - CNM01&nbsp;&nbsp;&nbsp;&nbsp; OPERATOR:&nbsp;&nbsp; AUTOEDAT TERM:&nbsp;&nbsp; AUTOEDAT STATUS:&nbsp;&nbsp; ACTIVE<br>
+        - CNM01&nbsp;&nbsp;&nbsp;&nbsp; OPERATOR:&nbsp;&nbsp; AUTOPSAV TERM:&nbsp;&nbsp; AUTOPSAV STATUS:&nbsp;&nbsp; ACTIVE<br>
+        - CNM01 &nbsp;&nbsp;&nbsp;&nbsp;OPERATOR: &nbsp;&nbsp;AUTOXCF TERM:&nbsp;&nbsp; AUTOXCF STATUS:&nbsp;&nbsp; ACTIVE<br>
+        - CNM01&nbsp;&nbsp;&nbsp;&nbsp; OPERATOR: &nbsp;&nbsp;AUTOXDSC TERM:&nbsp;&nbsp; AUTOXDSC STATUS: &nbsp;&nbsp;ACTIVE<br>
+        - CNM01&nbsp;&nbsp;&nbsp;&nbsp; OPERATOR: &nbsp;&nbsp;AUTO1 TERM: &nbsp;&nbsp;AUTO1 STATUS:&nbsp;&nbsp;&nbsp;&nbsp; ACTIVE<br>
+        - CNM01&nbsp;&nbsp;&nbsp;&nbsp; OPERATOR:&nbsp;&nbsp; AUTO2 TERM:&nbsp;&nbsp; AUTO2 STATUS:&nbsp;&nbsp;&nbsp;&nbsp; ACTIVE<br>
+        - CNM01 &nbsp;&nbsp;&nbsp;&nbsp;OPERATOR:&nbsp;&nbsp; DBAUTO1 TERM: &nbsp;&nbsp;DBAUTO1 STATUS:&nbsp;&nbsp; ACTIVE<br>
+        - CNM01&nbsp;&nbsp;&nbsp;&nbsp; OPERATOR:&nbsp;&nbsp; DBAUTO2 TERM: &nbsp;&nbsp;DBAUTO2 STATUS:&nbsp;&nbsp; ACTIVE<br>
+        - CNM01&nbsp;&nbsp;&nbsp;&nbsp; OPERATOR:&nbsp;&nbsp; DSIIPCHK TERM:&nbsp;&nbsp; DSIIPCHK STATUS: &nbsp;&nbsp;ACTIVE<br>
+        - CNM01&nbsp;&nbsp;&nbsp;&nbsp; OPERATOR: &nbsp;&nbsp;MVSCMDS TERM: &nbsp;&nbsp;MVSCMDS STATUS:&nbsp;&nbsp; ACTIVE<br>
+        - CNM01&nbsp;&nbsp;&nbsp;&nbsp; OPERATOR: &nbsp;&nbsp;DSILCOPR TERM: &nbsp;&nbsp;DSILCOPR STATUS:&nbsp;&nbsp; ACTIVE<br>
+        - CNM01&nbsp;&nbsp;&nbsp;&nbsp; OPERATOR:&nbsp;&nbsp; AUTOTCPS TERM:&nbsp;&nbsp; AUTOTCPS STATUS: &nbsp;&nbsp;ACTIVE<br>
+        - CNM01&nbsp;&nbsp;&nbsp;&nbsp; END OF STATUS DISPLAY<br>
+        C CNM01 &nbsp;&nbsp;&nbsp;&nbsp;LIST STATUS=NNT<br>
+        - CNM01 &nbsp;&nbsp;&nbsp;&nbsp;MAX SESS: 00032767<br>
+        - CNM01 &nbsp;&nbsp;&nbsp;&nbsp;NO ACTIVE NCCF TO NCCF SESSIONS FOUND<br>
+        ??? ***
+
+    </div> 
+<p><i>Figure 16. Information about Your NetView Session Panel</i></p>    
+<p>Press the ENTER key to release any messages being held by the command facility. The three asterisks<br>
+    (***) at the bottom of the screen indicate that there are more messages to display.</p>
+<p>Enter the CLEAR command to refresh the command facility screen.</p> 
+<p><b>Displaying PF key settings</b></p>  
+<p>To display the PF key settings, enter the following command:</p> 
+<p style="background-color: gainsboro;">DISPFK</p> 
+<p>The PF key settings are displayed for the component from which you entered the command. A panel<br>
+    similar to Figure 17 on page 78 is displayed. </p>
+    <div class="Table">
+        <p style="padding-top: 3%;">&nbsp;&nbsp;&nbsp;CNMKWIND&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OUTPUT FROM DISPFK  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LINE 0 OF 32</p>
+
+        <p>*------------------------------- Top of Data------------------------------------------------------------------* </p>
+        <p>DISPLAY OF PF/PA KEY SETTINGS FOR NCCF</p>
+<table class="tab"   >
+    <th>KEY</th><th> ----TYPE----</th><th>-----------COMMAND------------</th><th>SET-APPL</th>
+<tr><ul><td>PA1</td></ul><ul><td>IMMED,IGNORE</td></ul><ul><td> RESET</td></ul><ul><td>NETVIEW</td></ul></tr>
+<tr><ul><td>PA2</td></ul><ul><td>IMMED,IGNORE</td></ul><ul><td>  AUTOWRAP TOGGLE</td></ul><ul><td>NETVIEW</td></ul></tr>
+<tr><ul><td>PA3</td></ul><ul><td>IMMED,IGNORE</td></ul><ul><td>  RETRIEVE AND EXECUTE</td></ul><ul><td>NETVIEW</td></ul></tr>
+<tr><ul><td>PF1</td></ul><ul><td> IMMED,APPEND</td></ul><ul><td>  HELP</td></ul><ul><td>NETVIEW</td></ul></tr>
+<tr><ul><td>PF2</td></ul><ul><td> IMMED,APPEND</td></ul><ul><td> GO</td></ul><ul><td>NCCF</td></ul></tr>
+<tr><ul><td>PF3</td></ul><ul><td> IMMED,IGNORE</td></ul><ul><td> RETURN</td></ul><ul><td>NETVIEW</td></ul></tr>
+<tr><ul><td>PF4</td></ul><ul><td> IMMED,APPEND</td></ul><ul><td> DISPFK</td></ul><ul><td>NETVIEW</td></ul></tr>
+<tr><ul><td>PF5</td></ul><ul><td> IMMED,APPEND</td></ul><ul><td> BROWSE LOG</td></ul><ul><td>NETVIEW</td></ul></tr>
+<tr><ul><td>PF6</td></ul><ul><td> IMMED,APPEND</td></ul><ul><td> ROLL</td></ul><ul><td>NETVIEW</td></ul></tr>
+<tr><ul><td>PF7</td></ul><ul><td> IMMED,IGNORE</td></ul><ul><td> BACK</td></ul><ul><td>NETVIEW</td></ul></tr>
+<tr><ul><td>PF8</td></ul><ul><td> IMMED,APPEND</td></ul><ul><td> FORWARD </td></ul><ul><td>NETVIEW</td></ul></tr>
+<tr><ul><td>PF9</td></ul><ul><td> IMMED,IGNORE</td></ul><ul><td>  PIPE HELDMSG | CONSOLE DELETE</td></ul><ul><td>NCCF</td></ul></tr>
+<tr><ul><td>PF10</td></ul><ul><td> IMMED,APPEND</td></ul><ul><td>  WINDOW</td></ul><ul><td>NETVIEW</td></ul></tr>
+<tr><ul><td>PF11</td></ul><ul><td> IMMED,IGNORE</td></ul><ul><td> HOLD</td></ul><ul><td>NCCF</td></ul></tr>
+<tr><ul><td>PF12</td></ul><ul><td> IMMED,IGNORE</td></ul><ul><td>  RETRIEVE</td></ul><ul><td>NETVIEW</td></ul></tr>
+</table>     
+<P>TO SEE YOUR KEY SETTINGS, ENTER 'DISPFK'<br>
+    CMD==></P>
+ </div>
+ <p><i>Figure 17. PF Key Settings for the Command Facility</i></p>
+<p>Use the F8 key to page forward through the contents.</p>
+<p>Press the F3 key to return to the command facility.</p>
+<p><b>Viewing operator identifiers and passwords</b></p>
+<p>To view NetView operator identifiers and passwords, enter the following command:</p>
+<p style="background-color: gainsboro;">BROWSE DSIOPF</p> 
+<p>A panel that is similar to Figure 18 on page 78 is displayed.</p>
+<div class="Table" style="padding-left: 5%;">
+    NETVIEW.BRWS ------ BROWSE DSIOPF (DSIPARM ) --- LINE 00000 TO 00017 OF 0117<br>
+<p style="padding-left: 55%;">SCROLL ==> CSR</p>
+    ----+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----<br>
+    ******************************** TOP OF DATA ********************* DATASET: 4<br>
+    ***********************************************************************<br>
+    * LICENSED MATERIALS - PROPERTY OF IBM *<br>
+    * 5697-NV6 © Copyright IBM Corp. 1986, 2019 *<br>
+    * ALL RIGHTS RESERVED. *<br>
+    * US GOVERNMENT USERS RESTRICTED RIGHTS *<br>
+    * - USE, DUPLICATION OR DISCLOSURE RESTRICTED BY *<br>
+    * GSA ADP SCHEDULE CONTRACT WITH IBM CORPORATION. *<br>
+    ***********************************************************************<br>
+    * NAME(DSIOPF) SAMPLE(DSIOPF) RELATED-TO( ) *<br>
+    * DESCRIPTION: SAMPLE DSIPARM - OPERATOR DEFINITIONS/PASSWORDS *<br>
+    * *<br>
+    *---------------------------------------------------------------------*<br>
+    * Include customer operator definitions. *<br>
+    *---------------------------------------------------------------------*<br>
+    ***************** START OF MEMBER DSIOPFU FROM DSIOPF DATASET: 2<br>
+    ***********************************************************************<br>
+    * 5697-NV6 © Copyright IBM Corp. 1986, 2019 *<br>
+    CMD==><br> 
+    TO SEE YOUR KEY SETTINGS, ENTER 'DISPFK'
+    
+</div>
+<p><i>Figure 18. Display of Operator Identifiers and Passwords</i></p>
+<p>Use the F8 key to page forward through the contents.</p>
+<p>Press the F3 key to return to the command facility panel.</p>
+<p><b>Using the terminal access facility (TAF)</b></p>
+<p>You also need to verify your installation of the NetView system by entering the NetView program through<br>
+    the terminal access facility (TAF). Use the BFSESS command list to start a full -screen session with<br>
+    another subsystem. If you are using subarea 01 for your installation, enter: </p>
+<p style="background-color: gainsboro;">BFSESS CNM01</p> 
+<p>Press ENTER again to display the NetView logon panel, if needed.<br>
+    To log on to the NetView system, enter:</p>
+    <p style="background-color: gainsboro;">OPER4</p> 
+    <p>in the OPERATOR ID field, and</p>
+    <p style="background-color: gainsboro;">OPER4</p>
+    <p>in the PASSWORD field. A panel similar to Figure 19 on page 79 is displayed</p> 
+<div class="Table" style="padding-left: 5%;">
+    NetView&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V6R3 - NM&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;NetView &nbsp;&nbsp;&nbsp;&nbsp;CNM01&nbsp;&nbsp;&nbsp;&nbsp; OPER4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;06/22/19 15:56:32<br>
+- CNM01 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DSI020I OPERATOR OPER4 LOGGED ON FROM TERMINAL TF01#000 USING<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PROFILE (DSIPROFA ), HCL ( )<br>
+- CNM01&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;DSI083I AUTOWRAP STOPPED<br>
+C CNM01&nbsp;&nbsp;&nbsp;&nbsp;CNM357I PFKDEF : PF KEY SETTINGS NOW ESTABLISHED. 'DISPFK' TO SEE<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;YOUR PF KEY SETTINGS<br>
+| CNM01<br><br>
+<ul>Enter LOG or LOGOFF to terminate session.<br>
+Enter HELP to obtain help.<br>
+Lead operator has been notified of your logon.<br>
+To obtain help from the network control center, enter</ul><br>
+<ul style="padding-left: 10%;">MSG PPT, your question here</ul><br>
+| CNM01<br>
+News for 30 Nov 2019<br><br>
+<p>The following information lists the enhancements for IBM Z NetView<br>
+V6R3, formerly known as IBM Tivoli NetView for z/OS.<br>
+This information also lists the enhancements for IBM Z NetView<br>
+for Continuous Availability V6R3, formerly know as IBM Tivoli NetView<br>
+Monitoring for GDPS if it is running in the NetView program.</p><br>
+For additional information, see the following website:<br>
+https://ibm.biz/Bdz9uw
+</div>
+<p><i>Figure 19. Entering the Command Facility after Logging On</i></p>
+<p>To go to the NetView main menu, press the Enter key and continue to press the Enter key until the<br>
+    NetView main menu is displayed.<br>
+    Press the F3 key to go to the command facility.<br>
+    Enter the CLEAR command to refresh the screen.<br>
+    To view the operator identifiers and passwords, enter the following command:<br>
+    </p>
+    <p style="background-color: gainsboro;">BR DSIOPF</p>
+    <p>BR is a synonym for BROWSE. A panel similar to Figure 20 on page 80 is displayed.</p>
+<div class="Table">
+    <p>NetView&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V6R3 - NM&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;NetView &nbsp;&nbsp;&nbsp;&nbsp;CNM01&nbsp;&nbsp;&nbsp;&nbsp; OPER4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;06/22/19 15:56:32</p>
+<table class="tab">
+    <tr><ul><td>-CNM01</td></ul><ul><td><b>BNH236E 'OPER4' IS NOT AUTHORIZED TO USE THE KEYWORD 'DSIPARM' AND<br>
+        VALUE 'DSIOPF' COMBINATION</b></td></ul></tr>
+        <tr><ul><td>C CNM01 </td></ul><ul><td>DSI238I BR COMMAND FAILED, INVALID PARAMETER: DSIOPF</td></ul></tr>
+            <tr><ul><td>-CNM01</td></ul><ul><td>BNH237E THE KEYWORD 'DSIPARM' AND VALUE 'DSIOPF' ARE PROTECTED BY<br>
+                COMMAND IDENTIFIER '*.*.READSEC.DSIPARM.*' IN 'TBLNAME=CNMSCAT2'
+                </td></ul></tr>
+                <tr><ul><td>C CNM01 </td></ul><ul><td>CNM337I VIEW : CODE 12 - YOU ARE NOT AUTHORIZED TO BROWSE 'DSIOPF'.<br>
+                    THE DSIKVS MACRO RESULTED IN A NONZERO RETURN CODE.
+                </td></ul></tr>          
+</table>
+<p class="a">-------------------------------------------------------------------------------------------------------------------------------------</p>
+<p class="a">???</p>
+</div>  
+<p><i>Figure 20. Command Facility Message Panel</i></p>  
+<p><b>Usage notes:</b></p>
+<p>1. OPER4 does not have the authority to display the DSIOPF member.<br>
+    2. Command authorization is being performed by using the NetView command authorization table<br>
+    (CNMSCAT2). If a SAF product (such as RACF) is being used for security, the information in Figure 20<br>
+    on page 80 will be different. </p>
+<p>To end your OPER4 operator session, enter:</p>  
+<p style="background-color: gainsboro;">LOGOFF</p>
+<p>at the cursor.</p>
+<p>You return to a panel similar to Figure 21 on page 80 (the command facility for the NETOP1 operator).</p>
+<div class="Table">
+    <p>NetView&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V6R3 - NM&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;NetView &nbsp;&nbsp;&nbsp;&nbsp;CNM01&nbsp;&nbsp;&nbsp;&nbsp; OPER4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;06/22/19 15:56:32</p>
+    <table class="tab">
+        <tr><ul><td>-CNM01</td></ul><ul><td>BFSESS CNM01</td></ul></tr>
+             <tr><ul><td>-CNM01</td></ul><ul><td>DSI498I SRCLU HAS BEEN DEFAULTED TO SRCLU = TF01#000 FOR FLSCN<br>
+                    SESSION TO APPLID = CNM01
+                     </td></ul></tr>
+                    <tr><ul><td>-CNM01 </td></ul><ul><td>DSI496I FLSCN SESSION BETWEEN APPLID = CNM01 &nbsp;&nbsp;&nbsp; AND SRCLU =<br>
+                        TF01#000 ENDED
+                      </td></ul></tr>          
+    </table>
+    <p class="a">-------------------------------------------------------------------------------------------------------------------------------------</p>
+    <p class="a">???</p>
+    </div> 
+<p>Figure 21. Command Facility Panel for Operator NETOP1</p>
+<p>Enter the CLEAR command to refresh the command facility screen.</p>  
+<p><b>Displaying common global variables</b></p>  
+<p>To list the common global variable names that begin with CNMSTYLE.NV, enter the following command:</p>
+<p style="background-color: gainsboro;">QRYGLOBL COMMON VARS=CNMSTYLE.NV*</p>
+<p>A panel similar to Figure 22 on page 80 is displayed.</p>
+<div class="Table">
+    <p>NetView&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V6R3 - NM&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;NetView &nbsp;&nbsp;&nbsp;&nbsp;CNM01&nbsp;&nbsp;&nbsp;&nbsp; OPER4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;06/22/19 15:56:32</p> 
+<p class="a" ;>
+    * CNM01 &nbsp;&nbsp;&nbsp;QRYGLOBL COMMON VARS=CNMSTYLE.NV*<br>
+    ' CNM01<br>
+    NETVIEW&nbsp;&nbsp;&nbsp; GLOBAL VARIABLE INFORMATION<br>
+    BNH103I &nbsp;&nbsp;&nbsp;COMMAND ISSUED AT: 06/22/19 15:59:00<br>
+    BNH061I<br>
+    BNH032I&nbsp;&nbsp;&nbsp; COMMON GLOBAL VARIABLES<br>
+    BNH036I&nbsp;&nbsp;&nbsp; GLOBAL VARIABLE NAME: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GLOBAL VARIABLE VALUE:<br>
+    BNH061I ----------------            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;------------------ <br>
+    BNH039I&nbsp;&nbsp;&nbsp; CNMSTYLE.NVROLE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NETWORK<br>
+    BNH039I &nbsp;&nbsp;&nbsp;CNMSTYLE.NV2I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NM<br>
+    BNH035I &nbsp;&nbsp;&nbsp;NUMBER OF VARIABLES FOUND: 2<br>
+    BNH061I<br>
+    BNH037I &nbsp;&nbsp;&nbsp;NETVIEW GLOBAL VARIABLE INFORMATION COMPLETE<br>
+    </p>
+</div>
+<p><i>Figure 22. Command Facility Panel to Display Common Global Variables</i></p>
+<p><b>Browsing Canzlog</b></p>
+<p>The consolidated audit, NetView program, and z/OS log (Canzlog) provides a comprehensive means of<br>
+    displaying the following kinds of information:<br>
+    • MVS messages<br>
+    • NetView messages<br>
+    • Broadcast messages<br>
+    • DOMS<br>
+    • Command echoes<br>
+    • Trace and audit messages</p>
+    <p>To browse the Canzlog log, enter the following command:</p>
+    <p style="background-color: gainsboro;">BROWSE CANZLOG</p>
+    <p>A panel similar to Figure 23 on page 81 is displayed.</p>
+    <div class="Table">
+        <p class="a">Canzlog &nbsp;&nbsp;&nbsp;&nbsp;TAG=(NVMSG,MVSMSG,DOM)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 06/22/19 15:57:07 -- 15:59:20
+        </p>
+        <p class="a">
+            15:57:07&nbsp;&nbsp;&nbsp;&nbsp; DSI238I BR COMMAND FAILED, INVALID PARAMETER: DSIOPF<br>
+            15:57:07 &nbsp;&nbsp;&nbsp;&nbsp;BNH237E THE KEYWORD 'DSIPARM' AND VALUE 'DSIOPF' ARE PROTECTED BY COMM<br>
+            15:57:07 &nbsp;&nbsp;&nbsp;&nbsp;CNM337I VIEW : CODE 12 - YOU ARE NOT AUTHORIZED TO BROWSE 'DSIOPF'. TH<br>
+            15:57:28&nbsp;&nbsp;&nbsp;&nbsp; LOGOFF<br>
+            15:57:28&nbsp;&nbsp;&nbsp;&nbsp; CNM493I CNMSDCA : #0000023 : CNME8251<br>
+            15:57:28 &nbsp;&nbsp;&nbsp;&nbsp;DSI081I OPERATOR OPER4, LOGOFF PROCEEDING: TERMINAL = TF01#000<br>
+            15:57:30 &nbsp;&nbsp;&nbsp;&nbsp;DSI496I FLSCN SESSION BETWEEN APPLID = CNM01 AND SRCLU = TF01#000 E<br>
+            15:58:38&nbsp;&nbsp;&nbsp;&nbsp; CLEAR<br>
+            15:59:00&nbsp;&nbsp;&nbsp;&nbsp; QRYGLOBL COMMON VARS=CNMSTYLE.NV*<br>
+            15:59:00&nbsp;&nbsp;&nbsp;&nbsp; BNH031I NETVIEW GLOBAL VARIABLE INFORMATION<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BNH103I COMMAND ISSUED AT: 06/22/19 15:59:00<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BNH061I<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BNH032I COMMON GLOBAL VARIABLES<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BNH036I GLOBAL VARIABLE NAME: GLOBAL VARIABLE VALUE:<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BNH061I<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BNH039I CNMSTYLE.NVROLE NETWORK<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BNH039I CNMSTYLE.NV2I NM<br>
+            &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BNH035I NUMBER OF VARIABLES FOUND: 2<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BNH061I<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BNH037I NETVIEW GLOBAL VARIABLE INFORMATION COMPLETE<br>
+            15:59:20 &nbsp;&nbsp;&nbsp;&nbsp;BROWSE CANZLOG<br>
+            TO SEE YOUR KEY SETTINGS, ENTER 'DISPFK'<br>
+            CMD==><br>
+            </p>
+    </div>
+<p><i>Figure 23. View Canzlog data</i></p>
+<p><b>Usage notes:</b></p>
+<p>1. You can use the BR LOG command to display messages that match a filter set by the DEFAULTS or<br>
+    OVERRIDE commands for CANZLOG.<br>
+    2. You can use the BR filtername command to display messages that match the specified filter name.<br>
+    You can display a list of defined filters by using the LIST CZFILTER command.<br>
+    Press the F3 key to return to the command facility. Enter the CLEAR command to refresh the command<br>
+    facility screen.</p>
+    <h4 class="heading">Testing Basic IP Management Functions</h4>
+    <hr class="hr1">
+    <p>You can issue a PING command to an IP host from the command facility. For example, to ping IP address<br>
+        1.2.3.4 with a host name of my.host.name.com enter the following command from the command facility:</p>
+        <p style="background-color: gainsboro;">PING 1.2.3.4 </p>  
+        <p>A panel similar to Figure 24 on page 82 is displayed.</p> 
+        <p><b>Usage note:</b> For the PING command to resolve IP host names, the resolver configuration must be correct<br>
+            in TCP/IP or the SYSTCPD DD statement in CNMPROC (CNMSJ009) must identify the location of your<br>
+            TCP/IP configuration data.</p>
+<div class="Table">
+    <p class="a">NetView&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  V6R3 - NM&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;NetView &nbsp;&nbsp;&nbsp;&nbsp; CNM01&nbsp;&nbsp;&nbsp;&nbsp;NETOP1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  06/22/19 16:00:04</p>
+<p class="a">* CNM01 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PING 1.2.3.4<br>
+    C CNM01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BNH765I Pinging my.host.name.com at 1.2.3.4 with 3 packets of<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;length 16 bytes<br>
+    C CNM01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BNH767I 16 bytes received from 1.2.3.4: seq=1 in 2ms<br>
+    C CNM01 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BNH767I 16 bytes received from 1.2.3.4: seq=2 in 2ms<br>
+    C CNM01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BNH767I 16 bytes received from 1.2.3.4: seq=3 in 1ms<br>
+    C CNM01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BNH769I 3 packets sent, 3 packets received, 0.00% packet loss<br>
+    C CNM01 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BNH770I Round trip times from 1 to 2 ms, averaging 1ms<br>
+     ---------------------------------------------------------------------------------------------------------------<br><br>
+
+    ??? Pings of 1.2.3.4 averaging 1ms</p><br>
+</div>            
+<p><i>Figure 24. PING command output</i></p>
+<p>To display a menu of available IP Management functions, enter the following command:</p>
+<p style="background-color: gainsboro;">NETVIP</p>
+<p>A panel similar to Figure 25 on page 82 is displayed.</p>
+<div class="Table">
+    <p>CNM4NVIP &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NetView IP Management Functions Menu    </p><br>
+    <p>Type the number or move the cursor to a function and press Enter</p>
+    <p class="a">1. Ping a device (PING)<br>
+        2. Trace the route to a device (TRACERTE)<br>
+        3. Check TCP connection status (IPSTAT)<br>
+        4. Work with IP traces (IPTRACE)<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for SP:_________________________<br>
+        5. Manage IP Active Monitoring (IPMAN)<br>
+        6. Issue SNMP commands (NVSNMP)<br>
+        7. Manage Sysplex<br>
+        8. Manage DVIPA<br>
+        9. Check the status of an IP port (TESTPORT)<br>
+        10. Show EE information for a VTAM resource (DIS PATH)<br></p>
+<p>Command ===></p> 
+ <p style="word-spacing: 200px;">F1=Help F3=Return F6=Roll</p>
+   <p style="padding-left: 65%;"> F12=Cancel</p><br>
+         </div>
+<p><i>Figure 25. IP Management functions menu</i></p> 
+<p><b>Usage note: </b>To select a function, you can enter the number associated with the function and press Enter,<br>
+    or move the cursor to the function description and press Enter. </p>        
+<p>To display a list of the NetView sysplex discovery commands, move the curser to option 7 and press<br>
+    Enter. A panel similar to Figure 26 on page 83 is displayed. </p>
+    <div class="Table">
+        <p>CNM4NVSP &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NetView Sysplex Management Functions Menu </p><br>
+        <p>Type the number or move the cursor to a function and press Enter</p>
+        <p class="a">1. Stack configuration and status (CNMSSTAC)<br>
+            2. IP stack interfaces (CNMSIFST)<br>
+            3. NetView configuration and status (CNMSNVST)<br>
+            4. OSA channel and ports (CNMSOSAP)<br>
+            5. HiperSockets adapters (CNMSHIPR)<br>
+            6. Telnet servers (CNMSTNST)<br>
+            7. Telnet server ports (CNMSTPST)<br>
+            </p>
+    <p>Command ===></p> 
+     <p style="word-spacing: 200px;">F1=Help F3=Return F6=Roll</p>
+       <p style="padding-left: 65%;"> F12=Cancel</p><br>  
+    </div>
+<p><i>Figure 26. NetView Sysplex Management Functions Menu Panel</i></p>
+<p>You can view configuration and status information about the NetView domains known to this NetView<br>
+    program. To do this, move the cursor to option 3 and press enter. A panel similar to Figure 27 on page<br>
+    83 is displayed.
+    </p>  
+    <div class="Table">
+        <p>CNMKWIND OUTPUT FROM CNMSNVST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LINE 0 OF 3</p>
+        <p>*------------------------------- Top of Data------------------------------------------------------------------*</p>
+        <p>BNH495I NUMBER OF NETVIEW APPLICATIONS: 1</p>
+        <p class="a"># Domain Status Total-CPU % Total-Stor Role &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sysplex-Role Syspl</p>
+        <p style="word-spacing: 50px;">1 CNM01 ACTIVE 0.02 11157 NETWORK MCAP 1</p>
+        <p>*------------------------------ Bottom of Data--------------------------------------------------------------*</p><br>
+        <p>TO SEE YOUR KEY SETTINGS, ENTER 'DISPFK'<br>
+            CMD==>
+            </p>
+    </div>  
+<p><i>Figure 27. Configuration and status information</i></p>    
+<p>Usage note: Not all IP management functions are enabled by default. To fully enable IP management,<br>
+    see IBM Z NetView Installation: Configuring Additional Components.
+    </p>
+<p>Press the F3 key until you return to the command facility panel.<br>
+    Enter the CLEAR command to refresh the command facility screen.
+    </p>   
+    <h4 class="heading">Testing the Hardware Monitor</h4> 
+    <hr class="hr1">
+<p>To generate an alert and record the alert to the hardware monitor database, enter the following<br>
+    command:</p>
+    <p style="background-color: gainsboro;">GENALERT N TYPE=PERM MAJ=1 MIN=1 ACT=1 HIER=ATCHM003,COMC PRID=3725</p>
+    <p>A panel similar to Figure 28 on page 83 is displayed</p>
+    <div class="Table">
+        <p class="a">NetView&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  V6R3 - NM&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;NetView &nbsp;&nbsp;&nbsp;&nbsp; CNM01&nbsp;&nbsp;&nbsp;&nbsp;NETOP1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  06/22/19 16:01:54 </p>
+    <p class="a">* CNM01 GENALERT N TYPE=PERM MAJ=1 MIN=1 ACT=1 HIER=ATCHM003,COMC PRID=3725    </p>
+    <p class="a">-------------------------------------------------------------------------------------------</p><br><br>
+    <p class="a">???</p>
+    </div>
+<p><i>Figure 28. GENALERT command output</i></p>
+<p>To go to the hardware monitor component, enter the following command:</p>
+<p style="background-color: gainsboro;">NPDA</p><br>
+<p>A panel similar to Figure 29 on page 84 is displayed.</p>
+<img src="img73.jpg" alt="">
+<p>Figure 29. Hardware Monitor Main Menu</p>
+<p><b>Note:</b> If the sample job CNMSJ005 is used to initialize a newly allocated hardware monitor (NPDA)<br>
+    database cluster, the database initialization dates shown on the hardware monitor main menu NPDA-01A<br>
+    will be 05/30/96.
+    </p>
+    <p>Examine the dates in the AL, EV, and ST fields. The dates cannot be asterisks. Your dates might not match<br>
+        the dates in Figure 29 on page 84.</p>
+    <p>Use the ALERTSH (ALH) command to display the alerts recorded in the hardware monitor database. To<br>
+        see a panel similar to Figure 30 on page 84, enter:
+        </p>
+        <p style="background-color: gainsboro;">ALH</p> 
+<div class="Table">
+    <p class="a">N E T V I E W&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SESSION DOMAIN:&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; CNM01 &nbsp;&nbsp;&nbsp;&nbsp; NETOP1&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 06/22/19 16:02:16 </p><br>
+<p class="a">SEL# DOMAIN RESNAME TYPE TIME ALERT DESCRIPTION:PROBABLE CAUSE<br>
+    ( 1) CNM01 ATCHM003 COMC 16:01 INITIALIZATION FAILURE:RING INTERFACE COUPLER</p>
+    <br>
+    <br>
+    <p class="a">ENTER SEL# (ACTION),OR SEL# PLUS M (MOST RECENT), P (PROBLEM), DEL (DELETE)</p><br><br><br>
+    <p class="a">???<br>
+        CMD==></p>
+</div>   
+<p><i>Figure 30. Alerts History Panel</i></p> 
+<p>If no alerts were recorded, you receive message BNJ925I:</p> 
+<p style="background-color: gainsboro;">BNJ925I NO DATA EXISTS FOR COMMAND SPECIFIED</p>  
+<p>Press the F3 key twice to return to the command facility panel.</p>
+<h4 class="heading"></h4>
+<hr class="hr1">
+<p>To go to the session monitor component, enter the following command:</p>
+<p style="background-color: gainsboro;">NLDM</p> 
+<p>A panel similar to Figure 31 on page 85 is displayed.</p>
+<div class="Table">
+    <p style="word-spacing: 500px;">NLDM.MENU PAGE.1</p>
+    <center>NETVIEW</center><br>
+    <center>DOMAIN &nbsp;&nbsp;CNM01</center><br>
+   <p class="a" style="word-spacing:200px ;">SEL# DESCRIPTION</p>
+   <p class="a">
+    ( 1)&nbsp;&nbsp;&nbsp;&nbsp; LUNAME LIST &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LIST OF ALL ACTIVE LOGICAL UNIT NAMES<br>
+    ( 2)&nbsp;&nbsp;&nbsp;&nbsp; SLUNAME LIST&nbsp;&nbsp;&nbsp;&nbsp; LIST OF ACTIVE SECONDARY LOGICAL UNIT NAMES<br>
+    ( 3) &nbsp;&nbsp;&nbsp;&nbsp;PLUNAME LIST&nbsp;&nbsp;&nbsp;&nbsp; LIST OF ACTIVE PRIMARY LOGICAL UNIT NAMES<br>
+    ( 4)&nbsp;&nbsp;&nbsp;&nbsp; PUNAME LIST&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;LIST OF ACTIVE PHYSICAL UNIT NAMES<br>
+    ( 5) &nbsp;&nbsp;&nbsp;&nbsp;CPNAME LIST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LIST OF ACTIVE CP AND SSCP NAMES<br>
+    ( 6)&nbsp;&nbsp;&nbsp;&nbsp; DOMAIN LIST &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LIST OF NLDM DOMAINS<br>
+    ( 7)&nbsp;&nbsp;&nbsp;&nbsp; ER LIST &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LIST OF ACTIVE EXPLICIT ROUTES<br>
+    ( 8)&nbsp;&nbsp;&nbsp;&nbsp; VR LIST&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LIST OF ACTIVE VIRTUAL ROUTES</p>
+    </table>
+<p class="a">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ENTER: H OR HELP FOR INFORMATION ON THE USE OF NLDM<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HELP NLDM COMMANDS FOR NLDM COMMAND LIST</p><br>
+    <center>NLDM FILE LAST INITIALIZED 08/22/19</center><br><br>
+<p>ENTER SEL# OR COMMAND <br>
+    CMD==>
+    </p>    
+</div>
+<p><i>Figure 31. Session Monitor Main Menu</i></p>
+<p><b>Note:</b> If the sample job CNMSJ005 is used to initialize a newly allocated session monitor (NLDM) <br>
+    database cluster, the database initialization date shown on the session monitor main menu NLDM.MENU <br>
+    will be 07/17/87.</p>
+<p>To display a list of all inactive NetView sessions enter:</p>
+<p style="background-color: gainsboro;">SESS * * INACT</p> 
+<p>A panel similar to Figure 32 on page 85 is displayed.</p>
+<div class="Table">
+<p class="a" style="word-spacing: 500px;">NLDM.MENU PAGE.1</p>
+<center>SESSION LIST</center>
+<p class="a" style="word-spacing: 500px;">NAME:* DOMAIN:CNM01</p>
+<p>-------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+<ul><p>&nbsp;&nbsp;&nbsp;&nbsp;***** PRIMARY **** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;***** SECONDARY ****</p></ul>
+<table class="tab" style="word-spacing: 100px;">
+    <th>SEL#</th><th> NAME</th><th>TYPE</th><th> DOM</th><th>NAME</th><th> TYPE</th><th>DOM</th><th>STARTTIME</th><th>ENDTIME</th>
+    <tr><td>(1)</td><td>CNM0100F</td><td>LU</td><td>CNM01</td><td>TF01#000</td><td>LU</td><td> CNM01</td><td>08/2215:56:13</td><td>08/2215:57:29</td></tr>
+    <tr><td>(2)</td><td> NT68MVS</td><td> SSCP</td><td>CNM01</td><td>CNM0100F</td><td>LU</td><td> CNM01</td><td>08/2215:56:13</td><td>08/2215:57:29</td></tr>
+    <tr><td>(3)</td><td>CNM01</td><td>LU</td><td>CNM01</td><td> TF01#000</td><td>LU</td><td> CNM01</td><td>08/2215:56:13</td><td>08/2215:56:13</td></tr>
+    <tr><td>(4)</td><td>NT68MVS</td><td> SSCP</td><td>CNM01</td><td>TF01#000</td><td>LU</td><td> CNM01</td><td>08/2215:56:13</td><td>08/2215:57:29</td></tr>
+    <tr><td>(5)</td><td>CNM01</td><td>LU</td><td>CNM01</td><td>NT68L703 </td><td>LU</td><td> CNM01</td><td>08/2215:52:07</td><td>08/2215:52:07</td></tr>
+</table>
+<p>END OF DATA <br>
+    ENTER SEL# (CONFIG), SEL# AND CT (CONN. TEST), SEL# AND STR (TERM REASON <br>
+    CMD==></p>
+</div>
+<p><i>Figure 32. Session List Panel</i></p>
+<p>Press the F3 key twice to return to the command facility panel.</p><br>
+<p><b>Logging Off</b></p>
+<p>To log off from the NetView program, enter:</p>
+<p style="background-color: gainsboro;">logoff</p>
+<h4 class="heading">Extending the Base Functions</h4>
+<hr class="hr1">
+<p>You completed the basic installation and configuration of the NetView program.</p><br>
+<p>You might want to consider additional configuration to extend the base NetView functions.</p>
+<table border="2" align="center" >
+   
+    <tr>
+        <th colspan="3"   class="table-content">
+            Table 12. Additional Configuration and Customization Options</th>
+    </tr>
+    <th>Task</th><th>Refer to...</th>
+    <tr><td>Configuring the NetView program for your<br>
+        environment
+        </td><td>IBM Z NetView Installation: Configuring Additional<br>
+            Components
+            </td></tr>
+     <tr><td>Configuring additional NetView functions<br>
+        For each function that you implement, test to make<br>
+        sure that it works correctly. </td><td> “NetView Functions” on page 89</td></tr>       
+<tr><td>Installation, configuration, and setup for NetView
+    REST Server</td><td>IBM Z NetView Installation: Configuring Additional
+        Components
+        </td></tr>
+<tr><td>Installing the NetView program on the same LPAR
+    as an existing NetView program
+    </td><td>Running Multiple NetView Programs in the Same
+        LPAR in IBM Z NetView Installation: Configuring
+        Additional Components
+        </td></tr>   
+<tr><td>Using the NetView program for IP management</td><td>IBM Z NetView Installation: Configuring Additional <br>
+    Components <br>
+    IBM Z NetView IP Management </td></tr> 
+<tr><td>Using the NetView program for sysplex
+    management</td><td>IBM Z NetView IP Management
+    </td></tr>   
+<tr><td>Implementing graphics support</td><td>IBM Z NetView Installation: Configuring Graphical
+    Components</td></tr>
+<tr><td>Extending automation <br>
+    Make sure that your automation tables are updated<br>
+    and correctly specified using AUTOCMD<br>
+    statements in the CNMSTYLE member. The<br>
+    DSITBL01 automation table is required for the<br>
+    NetView program and provides basic automation<br>
+    statements to respond to messages and<br>
+    management services units (MSUs).<br>
+    Use %INCLUDE members to define changes for<br>
+    your environment and add these changes before<br>
+    any automation statements that are provided with<br>
+    the NetView program. Code any local<br>
+    customization with CONTINUE(YES).</td><td>IBM Z NetView Automation Guide</td></tr>   
+    <tr><td>Using installation exits</td><td>IBM Z NetView Programming: Assembler or IBM Z
+        NetView Programming: PL/I and C</td></tr>  
+    <tr><td>Writing command processors</td><td>IBM Z NetView Programming: Assembler or IBM Z
+        NetView Programming: PL/I and C
+        </td></tr> 
+    <tr><td>Installing the IBM Z NetView for Continuous
+        Availability product</td><td>IBM Z NetView for Continuous Availability <br>
+            Configuring and Using the GDPS Continuous <br>
+            Availability Solution
+            </td></tr>                   
+</table><br>
+<h4 class="heading">Preparing for Production</h4>
+<hr class="hr1">
+<p>To run the NetView program in production, consider the following steps: <br>
+    • Make sure that the V6.3.0 modules are active in the production system.<br>
+    Chapter 7. Verifying the Installation 87<br>
+    • If you are using the NetView status monitor or AMI function, make sure that the V6.3.0 SCNMLNK1<br>
+    members are in use by VTAM.<br>
+    • Allocate the VSAM data sets for the production LPAR.<br>
+    • Complete any tuning and customization tasks your system requires. See “Extending the Base<br>
+    Functions” on page 85 for more information.<br>
+    • If you are using the NetView program for system automation, review your system automation planning<br>
+    and verify that any new operating procedures are ready for implementation.<br>
+    For each administration task that you prepared, test to ensure that it was done correctly. When you are<br>
+    satisfied, the NetView program is ready for full production.<br>
+</p>
+<p><b>Note: </b>If you resume production under a previous release of the NetView program, cancel the NetView<br>
+    subsystem job and close the V6.3.0 application</p>
+
+
+
+
+</body> 
+</html>
